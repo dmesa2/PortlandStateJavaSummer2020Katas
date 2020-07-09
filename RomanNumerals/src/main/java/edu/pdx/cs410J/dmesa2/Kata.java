@@ -15,11 +15,18 @@ public class Kata {
   }
 
   public static String romanNumeralFor(int number){
-    if(number == 1){
-      return "I";
+    if(number < 5 ){
+      StringBuilder sb = new StringBuilder();
+      for ( int i = 0 ; i < number; i ++ ) {
+        sb.append("I");
+      }
+      return sb.toString();
     }
-    else{
+    else if ( number == 5){
       return "V";
+    }
+    else {
+      return "X";
     }
   }
 }
