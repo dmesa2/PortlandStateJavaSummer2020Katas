@@ -13,4 +13,13 @@ public class Kata {
     System.err.println("Missing command line arguments");
     System.exit(1);
   }
+
+  public static String romanNumeralFor(int number){
+    if(number == 1){
+      return "I";
+    }
+    else{
+      return "V";
+    }
+  }
 }
