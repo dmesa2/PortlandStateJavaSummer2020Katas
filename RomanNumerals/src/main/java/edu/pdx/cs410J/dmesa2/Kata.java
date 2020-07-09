@@ -44,8 +44,22 @@ public class Kata {
       }
       return sb.toString();
     }
+    else if (number == 14){
+      return "XVI";
+    }
+    else if(number == 15){
+      return "XV";
+    }
+    else if(number < 20){
+      StringBuilder sb = new StringBuilder();
+      sb.append("XV");
+      for ( int i = 15 ; i < number; i ++ ) {
+        sb.append("I");
+      }
+      return sb.toString();
+    }
     else {
-      return "not defined yet";
+      return "not defined";
     }
   }
 

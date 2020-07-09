@@ -1,5 +1,6 @@
 package edu.pdx.cs410J.dmesa2;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -64,19 +65,49 @@ public class KataTest
   }
 
   @Test
-  public void romanNumeralFor11isX(){
+  public void romanNumeralFor11isXI(){
     assertThat(Kata.romanNumeralFor(11), equalTo("XI"));
   }
 
   @Test
-  public void romanNumeralFor12isX(){
+  public void romanNumeralFor12isXII(){
     assertThat(Kata.romanNumeralFor(12), equalTo("XII"));
   }
 
   @Test
-  public void romanNumeralFor13isX(){
+  public void romanNumeralFor13isXIII(){
     assertThat(Kata.romanNumeralFor(13), equalTo("XIII"));
   }
 
+  @Ignore
+  @Test
+  public void romanNumeralFor14isXIV(){
+    assertThat(Kata.romanNumeralFor(14), equalTo("XIV"));
+  }
 
+  @Test
+  public void romanNumeralFor15isXV(){
+    assertThat(Kata.romanNumeralFor(15), equalTo("XV"));
+  }
+
+  @Test
+  public void romanNumeralFor16isXVI(){
+    assertThat(Kata.romanNumeralFor(16), equalTo("XVI"));
+  }
+
+  @Test
+  public void romanNumeralFor17isXVII(){
+    assertThat(Kata.romanNumeralFor(17), equalTo("XVII"));
+  }
+
+  @Test
+  public void romanNumeralFor18isXVIII(){
+    assertThat(Kata.romanNumeralFor(18), equalTo("XVIII"));
+  }
+
+  @Ignore
+  @Test
+  public void romanNumeralFor19isXIX(){
+    assertThat(Kata.romanNumeralFor(19), equalTo("XIX"));
+  }
 }
