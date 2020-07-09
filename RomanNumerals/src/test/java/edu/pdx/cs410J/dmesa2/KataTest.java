@@ -39,8 +39,44 @@ public class KataTest
   }
 
   @Test
-  public void romanNumeralFor10isV(){
+  public void romanNumeralFor6isVI(){
+    assertThat(Kata.romanNumeralFor(6), equalTo("VI"));
+  }
+
+  @Test
+  public void romanNumeralFor7isVII(){
+    assertThat(Kata.romanNumeralFor(7), equalTo("VII"));
+  }
+
+  @Test
+  public void romanNumeralFor8isVIII(){
+    assertThat(Kata.romanNumeralFor(8), equalTo("VIII"));
+  }
+
+  @Test
+  public void romanNumeralFor9isVIIII(){
+    assertThat(Kata.romanNumeralFor(9), equalTo("VIIII"));
+  }
+
+  @Test
+  public void romanNumeralFor10isX(){
     assertThat(Kata.romanNumeralFor(10), equalTo("X"));
   }
+
+  @Test
+  public void romanNumeralFor11isX(){
+    assertThat(Kata.romanNumeralFor(11), equalTo("XI"));
+  }
+
+  @Test
+  public void romanNumeralFor12isX(){
+    assertThat(Kata.romanNumeralFor(12), equalTo("XII"));
+  }
+
+  @Test
+  public void romanNumeralFor13isX(){
+    assertThat(Kata.romanNumeralFor(13), equalTo("XIII"));
+  }
+
 
 }

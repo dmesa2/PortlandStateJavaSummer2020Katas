@@ -25,8 +25,28 @@ public class Kata {
     else if ( number == 5){
       return "V";
     }
-    else {
+    else if (number < 10){
+      StringBuilder sb = new StringBuilder();
+      sb.append("V");
+      for ( int i = 5 ; i < number; i ++ ) {
+        sb.append("I");
+      }
+      return sb.toString();
+    }
+    else if (number == 10 ){
       return "X";
     }
+    else if (number < 14 ) {
+      StringBuilder sb = new StringBuilder();
+      sb.append("X");
+      for ( int i = 10 ; i < number; i ++ ) {
+        sb.append("I");
+      }
+      return sb.toString();
+    }
+    else {
+      return "not defined yet";
+    }
   }
+
 }
