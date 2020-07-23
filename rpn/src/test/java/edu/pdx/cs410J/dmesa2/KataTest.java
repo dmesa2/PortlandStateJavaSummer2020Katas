@@ -6,6 +6,12 @@ public class KataTest
 {
 
   @Test
+  public void outsideOneOperator(){
+    String x = "5";
+    String y = "6";
+  }
+
+  @Test
   public void canInstantiateKataClass() {
     new Kata();
   }
