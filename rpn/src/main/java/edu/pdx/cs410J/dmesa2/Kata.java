@@ -10,7 +10,8 @@ import java.util.Stack;
  */
 public class Kata {
                                                                                     
-public static void main(String[] args) {
+
+  public static void main(String[] args) {
     System.err.println("Missing command line arguments");
     System.exit(1);
   }
@@ -32,52 +33,55 @@ public static void main(String[] args) {
     String[] input = _input.split(" ");
     int value=0;
     for (String i :input){
-      if(isNumeric(i))
-      {
-        System.out.println("number "+ i);
-        stack.push(i);
-      }
-      else
-      {
-        int val1 = Integer.parseInt(stack.pop().toString());
-        int val2 = Integer.parseInt(stack.pop().toString());
-        switch (i)
-        {
-          case "+":
+      do {
+        if (isNumeric(i)) {
+          //System.out.println("number " + i);
+          stack.push(i);
+        } else {
+
+          //System.out.println("val1 " + val1 + " val2 " + val2);
+          if (i.equals("+")) {
+            int val1 = Integer.parseInt(stack.pop().toString());
+            int val2 = Integer.parseInt(stack.pop().toString());
             value = val2 + val1;
             stack.push(Integer.toString(value));
-            break;
-
-          case "-":
+          } else if (i.equals("-")) {
+            int val1 = Integer.parseInt(stack.pop().toString());
+            int val2 = Integer.parseInt(stack.pop().toString());
             value = val2 - val1;
             stack.push(Integer.toString(value));
-            break;
-
-          case "/":
+          } else if (i.equals("/")) {
+            int val1 = Integer.parseInt(stack.pop().toString());
+            int val2 = Integer.parseInt(stack.pop().toString());
             value = val2 / val1;
             stack.push(Integer.toString(value));
-            break;
-
-          case "*":
+          } else if (i.equals("*")) {
+            int val1 = Integer.parseInt(stack.pop().toString());
+            int val2 = Integer.parseInt(stack.pop().toString());
             value = val2 * val1;
             stack.push(Integer.toString(value));
-            break;
-
-          case "MAX":
-            value = Math.max(val2,val1);
+          } else if (i.equals("MAX")) {
+            int val1 = Integer.parseInt(stack.pop().toString());
+            int val2 = Integer.parseInt(stack.pop().toString());
+            value = Math.max(val2, val1);
+            //System.out.println("value " + value);
             stack.push(Integer.toString(value));
-            stack.push("MAX");
-            break;
 
-          case "MIN":
-            value = Math.min(val2,val1);
+          } else if (i.equals("MIN")) {
+            int val1 = Integer.parseInt(stack.pop().toString());
+            int val2 = Integer.parseInt(stack.pop().toString());
+            value = Math.min(val2, val1);
             stack.push(Integer.toString(value));
-            stack.push("MIN");
-            break;
+            //System.out.println("value " + value);
+          }
+          else if(i.equals("SQRT")){
+            int val1 = Integer.parseInt(stack.pop().toString());
+            value = (int) Math.sqrt(val1);
+            stack.push(Integer.toString(value));
+          }
 
         }
-      }
-
+      }while(stack.isEmpty());
     }
     return Integer.parseInt(stack.pop());
   }
